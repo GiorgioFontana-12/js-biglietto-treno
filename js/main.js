@@ -5,16 +5,16 @@ let eta = parseInt(prompt (`quanti anni hai?`))
 
 let costoTotale   = (kmPercorsi * 0.21  )
 
-if (eta < 18 ){
+if (isNaN(eta) || isNaN(kmPercorsi)  ) {
+    alert ("i dati inseriti sono scorretti ricaricare la pagina e riprovare")
+} else if (eta < 18) {
     let scontoMinori  = (costoTotale * 0.2  )
     let prezzoMinori  = (costoTotale - scontoMinori )
-    alert ("il costo del tuo biglietto è: " + prezzoMinori.toFixed(2)  + "€" )
+    alert ("il costo del tuo biglietto è: " + prezzoMinori.toFixed(2)  + "€" )    
 } else if (eta > 60) {
     let scontoAnziani = (costoTotale * 0.45 )
     let prezzoAnziani = (costoTotale - scontoAnziani)
-    alert ("il costo del tuo biglietto è: " + prezzoAnziani.toFixed(2) + "€" )    
-} else if (isNaN(eta) || isNaN(kmPercorsi)  ) {
-    alert (" i dati inseriti sono scorretti ricaricare la pagina e riprovare ")
+    alert ("il costo del tuo biglietto è: " + prezzoAnziani.toFixed(2) + "€" ) 
 } else {
     alert ("il costo del tuo biglietto è: " + costoTotale.toFixed(2)   + "€" )
 }
