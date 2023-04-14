@@ -12,9 +12,9 @@ if (isNaN(eta) || isNaN(kmPercorsi)  ) {
     let prezzoMinori  = (costoTotale - scontoMinori )
     alert ("il costo del tuo biglietto è: " + prezzoMinori.toFixed(2)  + "€" )    
 } else if (eta > 60) {
-    let scontoAnziani = (costoTotale * 0.45 )
+    let scontoAnziani = (costoTotale * 0.40 )
     let prezzoAnziani = (costoTotale - scontoAnziani)
-    alert ("il costo del tuo biglietto è: " + prezzoAnziani.toFixed(2) + "€" ) 
+    alert ("il costo del tuo biglietto è: " + prezzoAnziani.toFixed(2) + "€" )  
 } else {
     alert ("il costo del tuo biglietto è: " + costoTotale.toFixed(2)   + "€" )
 }
